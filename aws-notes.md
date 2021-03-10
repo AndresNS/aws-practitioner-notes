@@ -4,7 +4,7 @@
 
 ### [Video: What is Cloud Computing?](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/CC887/what-is-cloud-computing)
 
-- Cloud computing
+- Cloud computing: On-demand delivery of IT resources over the internet with pay-as-you-go pricing
 - Saas
 
 ## Module 2: Compute In the Cloud
