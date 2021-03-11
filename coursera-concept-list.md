@@ -43,3 +43,41 @@
 - Serverless
   - AWS Lambda
 - Containers
+
+## Module 3: AWS Global Infrastructure and Reliability
+
+### [Video: Regions](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/pXq5y/regions)
+
+- Regions
+  - Compliance
+  - Proximity
+  - Available
+  - Pricing
+- Availability Zones I
+- Edge Locations
+- Amazon Cloudfront
+- AWS Outposts
+- AWS Resources
+  - AWS Management Console
+  - AWS Command Line Interface (AWS CLI)
+  - AWS SDKs
+- AWS Elastic Beanstalk
+- AWS CloudFormation
+
+## Module 4: Networking
+
+### [Video: Conectivity to AWS](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/TdOwH/connectivity-to-aws)
+
+- Amazon Virtual Private Cloud (Amazon VPC)
+- Subnet
+  - Public Subnet
+  - Private Subnet
+- Internet Gateway
+- Virtual Private Gateway
+- AWS Direct Connect
+- Packet
+- Network Access Control List (ACLs)
+  - Stateless Packet Filtering
+- Security Group
+  - Stateful Packet Filtering
+- Amazon Route 53

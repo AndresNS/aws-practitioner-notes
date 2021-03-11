@@ -58,35 +58,39 @@
 
 ### [Video: Regions](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/pXq5y/regions)
 
-- Regions
-- Availability Zones
-- Edge Locations
-- Amazon Cloudfront
-- Amazon Route 53
-- AWS Outposts
-- AWS Resources
-  - AWS Management Console
-  - AWS CLI
-  - AWS SDKs
-- AWS Elastic Beanstalk
-- AWS CloudFormation
+- **Regions:** Are physical locations around the world where data centers are clustered. When determining the right Region for your services, data, and applications, consider the following four business factors.
+  - **Compliance** with data governance and legal requirements
+  - **Proximity** to your customers
+  - **Available** services within a Region
+  - **Pricing**
+- **Availability Zones:** Is a single data center or a group of data centers within a Region.
+- **Edge Locations:** Is a site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery.
+- **Amazon Cloudfront:** Is a fast content delivery network (CDN) service that helps deliver data, video, applications, and APIs to customers around the world with low latency and high transfer speeds. Amazon CloudFront uses Edge locations all around the world to help accelerate communication with users no matter where they are.
+- **AWS Outposts:** Is a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises. AWS Outposts delivers fully managed AWS infrastructure, native AWS services, APIs, and tools to virtually any customer on premises facility.
+- **AWS Resources:**
+  - **AWS Management Console:** Is a web-based interface for accessing and managing AWS services.
+  - **AWS Command Line Interface (AWS CLI):** Enables you to control multiple AWS services directly from the command line within one tool.
+  - **AWS SDKs:** SDKs make it easier for you to use AWS services through an API designed for your programming language or platform. SDKs enable you to use AWS services with your existing applications or create entirely new applications that will run on AWS.
+- **AWS Elastic Beanstalk:** Is an easy-to-use service for deploying and scaling web applications and services developed with a variety of programming languages. You provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks: Adjust capacity, Load balancing, Automatic scaling, Application health monitoring.
+- **AWS CloudFormation:** AWS CloudFormation is an infrastructure as code tool, that allows you to define a wide variety of AWS resources in a declarative way using JSON or YAML text based documents, called CloudFormation Templates.
 
 ## Module 4: Networking
 
 ### [Video: Conectivity to AWS](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/TdOwH/connectivity-to-aws)
 
-- VPC
-- Subnet
-- Internet Gateway
-- Virtual Private Gateway
-- AWS Direct Connect
-- Network Hardening
-- Packet
-- Network Access control list
-  - Stateless
-- Security Group
-  - Stateful
-- Amazon Route 53
+- **Amazon Virtual Private Cloud (Amazon VPC):** Is networking service that you can use to establish boundaries around your AWS resources. Amazon VPC enables you to provision an isolated section of the AWS Cloud. In this isolated section, you can launch resources in a virtual network that you define. Within a virtual private cloud (VPC), you can organize your resources into **subnets**. A VPC allows you to define your private IP range for your AWS resources. In a VPC, subnets can communicate with each other. For example, you might have an application that involves Amazon EC2 instances in a public subnet communicating with databases that are located in a private subnet.
+- **Subnet:** Subnets are chunks of IP addresses in your VPC that allow you to group resources together. Subnets control whether resources are either publicly, or privately available.
+  - **Public Subnet:** Contains resources that need to be accessible by the public, such as an online store’s website.
+  - **Private Subnet:** Contains resources that should be accessible only through your private network, such as a database that contains customers’ personal information and order histories.
+- **Internet Gateway:** Is a connection between a VPC and the internet to allow public traffic from the internet to access your VPC.
+- **Virtual Private Gateway:** The virtual private gateway is the component that allows protected internet traffic to enter into the VPC. A virtual private gateway enables you to establish a virtual private network (VPN) connection between your VPC and a private network, such as an on-premises data center or internal corporate network. A virtual private gateway allows traffic into the VPC only if it is coming from an approved network.
+- **AWS Direct Connect:** Is a service that enables you to establish a dedicated private connection between your data center and a VPC. The private connection that AWS Direct Connect provides helps you to reduce network costs and increase the amount of bandwidth that can travel through your network.
+- **Packet:** Packets are messages from the internet, and every packet that crosses the subnet boundaries, gets checked against something called a network access control list or Network ACL.
+- **Network Access Control List (ACLs):** A network access control list (ACL) is a virtual firewall that controls inbound and outbound traffic at the **subnet level**. By default, **your account’s default network ACL allows all inbound and outbound traffic**, but you can modify it by adding your own rules. For **custom network ACLs, all inbound and outbound traffic is denied** until you add rules to specify which traffic to allow. ACLs are **Stateless**.
+  - **Stateless Packet Filtering:** They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
+- **Security Group:** A security group is a virtual firewall that controls inbound and outbound traffic for an **Amazon EC2 instance**. By default, a security group **denies all inbound traffic and allows all outbound traffic**. You can add custom rules to configure which traffic to allow or deny. Security Groups are **Stateful**.
+  - **Stateful Packet Filtering:** They remember previous decisions made for incoming packets.
+- **Amazon Route 53:** Is a DNS web service. It gives developers and businesses a reliable way to route end users to internet applications hosted in AWS. Amazon Route 53 connects user requests to infrastructure running in AWS (such as Amazon EC2 instances and load balancers). It can route users to infrastructure outside of AWS. Another feature of Route 53 is the ability to manage the DNS records for domain names.
 
 ## Module 5: Storage and databases
 
