@@ -96,36 +96,41 @@
 
 ### [Video: Storage and databases](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/A3izm/introduction-to-module-5)
 
-- Block level storage
-- Instance store volumes
-- Amazon Elastic Block Store (EBS)
-- EBS Volumes
-- Snapshots: Incremental backups
-- Amazon Simple Storage Service (S3)
-  - Standard
-  - Static website hosting
-  - Stardard Infrequent Access (Standard I-A)
-  - S3 Intelligent-Tiering
-  - S3 Glacier
-  - S3 Glacier Deep Archive
-- Amazon Elastic File (EFS)
-- Amazon Relational Database Service
-- Amazon Aurora
-- Amazon DynamoDB
-- Amazon Redshift
-- AWS Database Migration Service (AWS DMS)
-  - Homogeneous databases
-  - Heterogeneous databases'
-  - Development and test database migrations
-  - Database consolidation
-  - Continuous replication
-- Amazon DocumentDB (MongoDB Compability)
-- Amazon Neptune
-- Amazon Managed Blockchain
-- Amazon Quantum Ledger Database
-- Database Accelerator
-- Amazon ElastiCache
-- Amazon DynamoDB Accelerator (DAX)
+- **Block level storage:** Is a place to store files, whereas a file is a series of bytes that are stored in blocks on disk. When a file is updated, the whole series of blocks aren't all overwritten. Instead, it updates just the pieces that change.
+- **Instance store volumes:** Some EC2 instances come with a local storage called instance store volumes. These volumes are physically attached to the host your EC2 instance is running on top of, and you can write to it just like a normal hard drive. However, since this volume is attached to the underlying physical host, if you stop or terminate your EC2 instance, all data written to the instance store volume will be deleted.
+- **Amazon Elastic Block Store (Amazon EBS):** Is a service that provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available. Because EBS volumes are for data that needs to persist, it’s important to back up the data. You can take incremental backups of EBS volumes by creating **Amazon EBS snapshots**. Sizes up to 16 TiB.
+- **Amazon EBS snapshots:** Is an incremental backup. This means that the first backup taken of a volume copies all the data. For subsequent backups, only the blocks of data that have changed since the most recent snapshot are saved.
+- **Object Storage:** In object storage, each object consists of data, metadata, and a key. The data might be an image, video, text document, or any other type of file. Metadata contains information about what the data is, how it is used, the object size, and so on. An object’s key is its unique identifier. Unlike Block Level Storage, when a file in object storage is modified, the entire object is updated.
+- **Amazon Simple Storage Service (S3):** Is a service that provides object-level storage. Amazon S3 stores data as objects in buckets. You can upload any type of file to Amazon S3, such as images, videos, text files, and so on. Amazon S3 offers unlimited storage space. The maximum file size for an object in Amazon S3 is 5 TB. When you upload a file to Amazon S3, you can set permissions to control visibility and access to it. You can also use the Amazon S3 versioning feature to track changes to your objects over time.
+  - **Standard:** Designed for frequently accessed data. Stores data in a minimum of three Availability Zones. S3 Standard provides high availability for objects. This makes it a good choice for a wide range of use cases, such as websites, content distribution, and data analytics. S3 Standard has a higher cost than other storage classes intended for infrequently accessed data and archival storage.
+  - **S3 Standard-Infrequent Access (S3 Standard-IA):** S3 Standard-IA is ideal for data infrequently accessed but requires high availability when needed. Both S3 Standard and S3 Standard-IA store data in a minimum of three Availability Zones. S3 Standard-IA provides the same level of availability as S3 Standard but with a lower storage price and a higher retrieval price.
+  - **S3 One Zone-Infrequent Access (S3 One Zone-IA):** Compared to S3 Standard and S3 Standard-IA, which store data in a minimum of three Availability Zones, S3 One Zone-IA stores data in a single Availability Zone. This makes it a good storage class to consider if the following conditions apply:
+    - You want to save costs on storage.
+    - You can easily reproduce your data in the event of an Availability Zone failure.
+  - **S3 Intelligent-Tiering:** Ideal for data with unknown or changing access patterns. Requires a small monthly monitoring and automation fee per object. In the S3 Intelligent-Tiering storage class, Amazon S3 monitors objects’ access patterns. If you haven’t accessed an object for 30 consecutive days, Amazon S3 automatically moves it to the infrequent access tier, S3 Standard-IA. If you access an object in the infrequent access tier, Amazon S3 automatically moves it to the frequent access tier, S3 Standard.
+  - **S3 Glacier:** Low-cost storage designed for data archiving. Able to retrieve objects within a few minutes to hours. S3 Glacier is a low-cost storage class that is ideal for data archiving. For example, you might use this storage class to store archived customer records or older photos and video files.
+  - **S3 Glacier Deep Archive:** Lowest-cost object storage class ideal for archiving. Able to retrieve objects within 12 hours. When deciding between Amazon S3 Glacier and Amazon S3 Glacier Deep Archive, consider how quickly you need to retrieve archived objects. You can retrieve objects stored in the S3 Glacier storage class within a few minutes to a few hours. By comparison, you can retrieve objects stored in the S3 Glacier Deep Archive storage class within 12 hours.
+- **File Storage:** In file storage, multiple clients (such as users, applications, servers, and so on) can access data that is stored in shared file folders. In this approach, a storage server uses block storage with a local file system to organize files. Clients access data through file paths. Compared to block storage and object storage, file storage is ideal for use cases in which a large number of services and resources need to access the same data at the same time.
+- **Amazon Elastic File System (Amazon EFS):** Is a scalable file system used with AWS Cloud services and on-premises resources. As you add and remove files, Amazon EFS grows and shrinks automatically. It can scale on demand to petabytes without disrupting applications. Amazon EFS is a regional service. It stores data in and across multiple Availability Zones. The duplicate storage enables you to access data concurrently from all the Availability Zones in the Region where a file system is located. Additionally, on-premises servers can access Amazon EFS using AWS Direct Connect.
+- **Amazon Relational Database Service (Amazon RDS):** Is a service that enables you to run relational databases in the AWS Cloud. Amazon RDS is available on six database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include: Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, Microsoft SQL Server.
+- **Amazon Aurora:** Is an enterprise-class relational database. It is compatible with MySQL and PostgreSQL relational databases. It is up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases. Amazon Aurora helps to reduce your database costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available. Consider Amazon Aurora if your workloads require high availability. It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3.
+- **Amazon DynamoDB:** Is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-region, multi-active, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. 
+- **Amazon Redshift:** Is a data warehousing service that you can use for big data analytics. It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data.
+- **AWS Database Migration Service (AWS DMS):** Enables you to migrate relational databases, nonrelational databases, and other types of data stores. With AWS DMS, you move data between a source database and a target database. The source and target databases can be of the same type or different types. During the migration, your source database remains operational, reducing downtime for any applications that rely on the database.
+  - **Homogeneous databases:** Is when the schema structures, data types, and database code is compatible between source and target.
+  - **Heterogeneous databases:** Is a type of migration in which source and target databases are of different types. Since the schema structures, data types, and database code are different between source and target, it is necessary to convert them using the AWS schema conversion tool.
+  - Other use cases for AWS DMS are: 
+    - **Development and test database migrations:** Enabling developers to test applications against production data without affecting production users.
+    - **Database consolidation:** Combining several databases into a single database.
+    - **Continuous replication:** Sending ongoing copies of your data to other target sources instead of doing a one-time migration.
+- **Additional Database Services:**
+  - **Amazon DocumentDB:** Is a document database service that supports MongoDB workloads. (MongoDB is a document database program.)
+  - **Amazon Neptune:** Is a graph database service. You can use Amazon Neptune to build and run applications that work with highly connected datasets, such as recommendation engines, fraud detection, and knowledge graphs.
+  - **Amazon Managed Blockchain:** Is a service that you can use to create and manage blockchain networks with open-source frameworks. Blockchain is a distributed ledger system that lets multiple parties run transactions and share data without a central authority.
+  - **Amazon Quantum Ledger Database (Amazon QLDB) :** Is a ledger database service. You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
+  - **Database Accelerator:**
+    - **Amazon ElastiCache:** Is a service that adds caching layers on top of your databases to help improve the read times of common requests. It supports two types of data stores: Redis and Memcached.
+    - **Amazon DynamoDB Accelerator (DAX):** Is an in-memory cache for DynamoDB. 
 
 ## Module 6: Security
 

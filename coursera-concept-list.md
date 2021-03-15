@@ -81,3 +81,40 @@
 - Security Group
   - Stateful Packet Filtering
 - Amazon Route 53
+
+## Module 5: Storage and databases
+
+### [Video: Storage and databases](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/A3izm/introduction-to-module-5)
+
+- Block level storage 
+- Instance store volumes 
+- Amazon Elastic Block Store (Amazon EBS) 
+- Amazon EBS snapshots 
+- Object Storage 
+- Amazon Simple Storage Service (S3) 
+  - Standard
+  - S3 Standard-Infrequent Access (S3 Standard-IA) 
+  - S3 One Zone-Infrequent Access (S3 One Zone-IA) 
+  - S3 Intelligent-Tiering 
+  - S3 Glacier 
+  - S3 Glacier Deep Archive 
+- File Storage
+- Amazon Elastic File System (Amazon EFS)
+- Amazon Relational Database Service (Amazon RDS)
+- Amazon Aurora
+- Amazon DynamoDB 
+- Amazon Redshift 
+- AWS Database Migration Service (AWS DMS) 
+  - Homogeneous databases
+  - Heterogeneous databases 
+    - Development and test database migrations 
+    - Database consolidation 
+    - Continuous replication 
+- Additional Database Services
+  - Amazon DocumentDB 
+  - Amazon Neptune 
+  - Amazon Managed Blockchain 
+  - Amazon Quantum Ledger Database (Amazon QLDB)
+  - Database Accelerators:
+    - Amazon ElastiCache 
+    - Amazon DynamoDB Accelerator (DAX)
