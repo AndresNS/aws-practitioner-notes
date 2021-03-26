@@ -114,12 +114,12 @@
 - **Amazon Elastic File System (Amazon EFS):** Is a scalable file system used with AWS Cloud services and on-premises resources. As you add and remove files, Amazon EFS grows and shrinks automatically. It can scale on demand to petabytes without disrupting applications. Amazon EFS is a regional service. It stores data in and across multiple Availability Zones. The duplicate storage enables you to access data concurrently from all the Availability Zones in the Region where a file system is located. Additionally, on-premises servers can access Amazon EFS using AWS Direct Connect.
 - **Amazon Relational Database Service (Amazon RDS):** Is a service that enables you to run relational databases in the AWS Cloud. Amazon RDS is available on six database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include: Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, Microsoft SQL Server.
 - **Amazon Aurora:** Is an enterprise-class relational database. It is compatible with MySQL and PostgreSQL relational databases. It is up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases. Amazon Aurora helps to reduce your database costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available. Consider Amazon Aurora if your workloads require high availability. It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3.
-- **Amazon DynamoDB:** Is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-region, multi-active, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. 
+- **Amazon DynamoDB:** Is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-region, multi-active, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications.
 - **Amazon Redshift:** Is a data warehousing service that you can use for big data analytics. It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data.
 - **AWS Database Migration Service (AWS DMS):** Enables you to migrate relational databases, nonrelational databases, and other types of data stores. With AWS DMS, you move data between a source database and a target database. The source and target databases can be of the same type or different types. During the migration, your source database remains operational, reducing downtime for any applications that rely on the database.
   - **Homogeneous databases:** Is when the schema structures, data types, and database code is compatible between source and target.
   - **Heterogeneous databases:** Is a type of migration in which source and target databases are of different types. Since the schema structures, data types, and database code are different between source and target, it is necessary to convert them using the AWS schema conversion tool.
-  - Other use cases for AWS DMS are: 
+  - Other use cases for AWS DMS are:
     - **Development and test database migrations:** Enabling developers to test applications against production data without affecting production users.
     - **Database consolidation:** Combining several databases into a single database.
     - **Continuous replication:** Sending ongoing copies of your data to other target sources instead of doing a one-time migration.
@@ -130,45 +130,45 @@
   - **Amazon Quantum Ledger Database (Amazon QLDB) :** Is a ledger database service. You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
   - **Database Accelerator:**
     - **Amazon ElastiCache:** Is a service that adds caching layers on top of your databases to help improve the read times of common requests. It supports two types of data stores: Redis and Memcached.
-    - **Amazon DynamoDB Accelerator (DAX):** Is an in-memory cache for DynamoDB. 
+    - **Amazon DynamoDB Accelerator (DAX):** Is an in-memory cache for DynamoDB.
 
 ## Module 6: Security
 
 ### [Video: Security](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/boUyb/introduction-to-module-6)
 
-- AWS Responsibility model
-- AWS account root user
-  - MFA
-- AWS Identity an Access Management (AWS IAM)
-- Principle of least privilege
-- IAM Policy
-- IAM Groups
-- IAM Role
-- Identity Federation
-- AWS Organizations
-  - Centralized Management
-  - Consolidated billing
-  - Hierarchical groupings of accounts
-  - AWS servvices and API actions access control
-  - Service control policies (SPCs)
-- AWS Compliance
-- AWS Artifact
-  - AWS Artifact Agreements
-  - AWS Artifact Reports
-- Customer Compliance Center
-- Distributed Denial-of-service (DDoS)
-  - UDP Flood
-  - HTTP Level attacks
-  - SLow loris attack
-- AWS Shield
-  - Standard
-  - Advanced
-- AWS WAF
-- Encryption at reset
-- Encryption In-transit
-- AWS Key Management Service (AWS KMS)
-- Amazon Inspector
-- Amazon GuardDuty
+- **AWS Responsibility model:**
+- **AWS account root user:**
+  - **MFA:**
+- **AWS Identity an Access Management (AWS IAM):**
+- **Principle of least privilege:**
+- **IAM Policy:**
+- **IAM Groups:**
+- **IAM Role:**
+- **Identity Federation:**
+- **AWS Organizations:**
+  - **Centralized Management:**
+  - **Consolidated billing:**
+  - **Hierarchical groupings of accounts:**
+  - **AWS servvices and API actions access control:**
+  - **Service control policies (SPCs):**
+- **AWS Compliance:**
+- **AWS Artifact:**
+  - **AWS Artifact Agreements:**
+  - **AWS Artifact Reports:**
+- **Customer Compliance Center:**
+- **Distributed Denial-of-service (DDoS):**
+  - **UDP Flood:**
+  - **HTTP Level attacks:**
+  - **SLow loris attack:**
+- **AWS Shield:**
+  - **Standard:**
+  - **Advanced:**
+- **AWS WAF:**
+- **Encryption at reset:**
+- **Encryption In-transit:**
+- **AWS Key Management Service (AWS KMS):**
+- **Amazon Inspector:**
+- **Amazon GuardDuty:**
 
 ## Module 7: Monitoring and Analytics
 
