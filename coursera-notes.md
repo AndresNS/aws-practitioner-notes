@@ -212,36 +212,49 @@
 
 ### [Video: Migration and Innovation](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/DaXvL/introduction-to-module-9)
 
-- AWS Cloud Adoption Framework (AWS CAF)
-  - AWS CAF Perspectives
-  - AWS CAF Action Plan
-- 6 R's of Migration
-  - Rehosting
-  - Replatforming
-  - Retire
-  - Retain
-  - Repurchase
-  - Refactor
-- AWS Snow Family
-  - AWS Snowcone
-  - AWS Snowball Edge
-    - Storage Optimized
-    - Compute Optimized
-  - AWS Snowmobile
-- Amazon SageMaker
-- Amazon Augmented AI (Amazon A2I)
-- Amazon Lex
-- Amazon Textract
-- Amazon DeepRacer
-- Internet of Things
-- AWS Ground Station
+- **AWS Cloud Adoption Framework (AWS CAF):** At the highest level, the AWS Cloud Adoption Framework (AWS CAF) organizes guidance into six areas of focus, called Perspectives. Each Perspective addresses distinct responsibilities. The planning process helps the right people across the organization prepare for the changes ahead.
+  - **AWS CAF Perspectives:** In general, the Business, People, and Governance Perspectives focus on business capabilities, whereas the Platform, Security, and Operations Perspectives focus on technical capabilities.
+    - **Business:** The Business Perspective ensures that IT aligns with business needs and that IT investments link to key business results. Use the Business Perspective to create a strong business case for cloud adoption and prioritize cloud adoption initiatives. Ensure that your business strategies and goals align with your IT strategies and goals.
+    - **People:** The People Perspective supports development of an organization-wide change management strategy for successful cloud adoption. Use the People Perspective to evaluate organizational structures and roles, new skill and process requirements, and identify gaps. This helps prioritize training, staffing, and organizational changes.
+    - **Governance:** Use the Governance Perspective to understand how to update the staff skills and processes necessary to ensure business governance in the cloud. Manage and measure cloud investments to evaluate business outcomes.
+    - **Platform:** The Platform Perspective includes principles and patterns for implementing new solutions on the cloud, and migrating on-premises workloads to the cloud. Use a variety of architectural models to understand and communicate the structure of IT systems and their relationships. Describe the architecture of the target state environment in detail.
+    - **Security:** The Security Perspective ensures that the organization meets security objectives for visibility, auditability, control, and agility. Use the AWS CAF to structure the selection and implementation of security controls that meet the organization’s needs.
+    - **Operations:** The Operations Perspective helps you to enable, run, use, operate, and recover IT workloads to the level agreed upon with your business stakeholders. Define how day-to-day, quarter-to-quarter, and year-to-year business is conducted. Align with and support the operations of the business. The AWS CAF helps these stakeholders define current operating procedures and identify the process changes and training needed to implement successful cloud adoption.
+- **6 R's of Migration:** When migrating applications to the cloud, six of the most common migration strategies that you can implement are:
+  - **Rehosting:** Also known as “lift-and-shift” involves moving applications without changes. In the scenario of a large legacy migration, in which the company is looking to implement its migration and scale quickly to meet a business case, the majority of applications are rehosted.
+  - **Replatforming:** Also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit. Optimization is achieved without changing the core architecture of the application.
+  - **Refactor:** Refactoring (also known as re-architecting) involves reimagining how an application is architected and developed by using cloud-native features. Refactoring is driven by a strong business need to add features, scale, or performance that would otherwise be difficult to achieve in the application’s existing environment.
+  - **Repurchase:** Repurchasing involves moving from a traditional license to a software-as-a-service model.
+  - **Retain:** Retaining consists of keeping applications that are critical for the business in the source environment. This might include applications that require major refactoring before they can be migrated, or, work that can be postponed until a later time.
+  - **Retire:** Retiring is the process of removing applications that are no longer needed.
+- **AWS Snow Family:** The AWS Snow Family is a collection of physical devices that help to physically transport up to exabytes of data into and out of AWS.
+  - **AWS Snowcone:** AWS Snowcone is a small, rugged, and secure edge computing and data transfer device. It features 2 CPUs, 4 GB of memory, and 8 TB of usable storage.
+  - **AWS Snowball Edge:**
+    - **Storage Optimized:** Snowball Edge Storage Optimized devices are well suited for large-scale data migrations and recurring transfer workflows, in addition to local computing with higher capacity needs.
+    - **Compute Optimized:** Snowball Edge Compute Optimized provides powerful computing resources for use cases such as machine learning, full motion video analysis, analytics, and local computing stacks.
+  - **AWS Snowmobile:** AWS Snowmobile is an exabyte-scale data transfer service used to move large amounts of data to AWS. You can transfer up to 100 petabytes of data per Snowmobile, a 45-foot long ruggedized shipping container, pulled by a semi trailer truck.
+- **Amazon SageMaker:**
+- **Amazon Augmented AI (Amazon A2I):**
+- **Amazon Lex:**
+- **Amazon Textract:**
+- **Amazon DeepRacer:**
+- **Internet of Things:**
+- **AWS Ground Station:**
 
 ## Module 10: The Cloud Journey
 
 ### [Video: The Cloud Journey](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/MiAby/introduction-to-module-10)
 
-- AWS Well-Architected Framework
-- Benefits of the AWS Cloud
+- **AWS Well-Architected Framework:** The AWS Well-Architected Framework helps you understand how to design and operate reliable, secure, efficient, and cost-effective systems in the AWS Cloud. It provides a way for you to consistently measure your architecture against best practices and design principles and identify areas for improvement. The Well-Architected Framework is based on five pillars:
+  - **Operational excellence:** Is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures. Design principles for operational excellence in the cloud include performing operations as code, annotating documentation, anticipating failure, and frequently making small, reversible changes.
+  - **Security:** The Security pillar is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+  - **Reliability:** Reliability is the ability of a system to do the following:
+    - Recover from infrastructure or service disruptions
+    - Dynamically acquire computing resources to meet demand
+    - Mitigate disruptions such as misconfigurations or transient network issues
+      Reliability includes testing recovery procedures, scaling horizontally to increase aggregate system availability, and automatically recovering from failure.
+  - **Performance efficiency:** Performance efficiency is the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve. Evaluating the performance efficiency of your architecture includes experimenting more often, using serverless architectures, and designing systems to be able to go global in minutes.
+  - **Cost optimization:** Cost optimization is the ability to run systems to deliver business value at the lowest price point. Cost optimization includes adopting a consumption model, analyzing and attributing expenditure, and using managed services to reduce the cost of ownership.
 
 ## AWS Certified Cloud Practicioner Basics
 
