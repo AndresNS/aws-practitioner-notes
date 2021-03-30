@@ -136,70 +136,77 @@
 
 ### [Video: Security](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/boUyb/introduction-to-module-6)
 
-- **AWS Responsibility model:**
-- **AWS account root user:**
-  - **MFA:**
-- **AWS Identity an Access Management (AWS IAM):**
-- **Principle of least privilege:**
-- **IAM Policy:**
-- **IAM Groups:**
-- **IAM Role:**
+- **AWS Responsibility model:** Customers are responsible for the security of everything that they create and put in the AWS Cloud: Operating System, Application, Data. AWS is responsible for security of the cloud: Physical, Network, Hypervisor
+- **AWS account root user:** Owner of the AWS account. The root user is accessed by signing in with the email address and password that you used to create your AWS account. It has complete access to all the AWS services and resources in the account.
+
+  - **MFA:** Multi-factor authentication. In IAM, multi-factor authentication (MFA) provides an extra layer of security for your AWS account.
+
+- **AWS Identity an Access Management (AWS IAM):** Enables you to manage access to AWS services and resources securely.
+- **Principle of least privilege:** A user is granted access only to what they need.
+- **IAM User**: An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials. By default, when you create a new IAM user in AWS, it has no permissions associated with it.
+- **IAM Policy:** An IAM policy is a document that allows or denies permissions to AWS services and resources.
+- **IAM Groups:** An IAM group is a collection of IAM users. When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
+- **IAM Role:** An IAM role is an identity that you can assume to gain temporary access to permissions.
 - **Identity Federation:**
-- **AWS Organizations:**
-  - **Centralized Management:**
-  - **Consolidated billing:**
-  - **Hierarchical groupings of accounts:**
-  - **AWS servvices and API actions access control:**
-  - **Service control policies (SPCs):**
-- **AWS Compliance:**
-- **AWS Artifact:**
-  - **AWS Artifact Agreements:**
-  - **AWS Artifact Reports:**
-- **Customer Compliance Center:**
-- **Distributed Denial-of-service (DDoS):**
-  - **UDP Flood:**
+- **AWS Organizations:** AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources.
+  - Centralized Management
+  - Consolidated billing
+  - Hierarchical groupings of accounts
+  - AWS services and API actions access control
+  - **Service control policies (SPCs):** Service control policies (SCPs) are a type of organization policy that you can use to manage permissions in your organization.
+- **AWS Artifact:** AWS Artifact is a service that provides on-demand access to AWS security and compliance reports and select online agreements. AWS Artifact consists of two main sections: AWS Artifact Agreements and AWS Artifact Reports.
+  - **AWS Artifact Agreements:** In AWS Artifact Agreements, you can review, accept, and manage agreements for an individual account and for all your accounts in AWS Organizations.
+  - **AWS Artifact Reports:** AWS Artifact Reports provide compliance reports from third-party auditors. These auditors have tested and verified that AWS is compliant with a variety of global, regional, and industry-specific security standards and regulations.
+- **Customer Compliance Center:** In the Customer Compliance Center, you can read customer compliance stories to discover how companies in regulated industries have solved various compliance, governance, and audit challenges.
+- **Distributed Denial-of-service (DDoS):** In a distributed denial-of-service (DDoS) attack, multiple sources are used to start an attack that aims to make a website or application unavailable. This can come from a group of attackers, or even a single attacker.
+  - **UDP Flood:** Security Groups
   - **HTTP Level attacks:**
-  - **SLow loris attack:**
-- **AWS Shield:**
-  - **Standard:**
-  - **Advanced:**
-- **AWS WAF:**
-- **Encryption at reset:**
-- **Encryption In-transit:**
-- **AWS Key Management Service (AWS KMS):**
-- **Amazon Inspector:**
-- **Amazon GuardDuty:**
+  - **SLowloris attack:** ELB
+- **AWS Shield:** AWS Shield is a service that protects applications against DDoS attacks. AWS Shield provides two levels of protection: Standard and Advanced.
+  - **Standard:** Automatically protects all AWS customers at no cost. It protects your AWS resources from the most common, frequently occurring types of DDoS attack.
+  - **Advanced:** Is a paid service that provides detailed attack diagnostics and the ability to detect and mitigate sophisticated DDoS attacks. Additionally, you can integrate AWS Shield with AWS WAF by writing custom rules to mitigate complex DDoS attacks.
+- **AWS WAF:** AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. AWS WAF works together with Amazon CloudFront and an Application Load Balancer. AWS WAF blocks or allows traffic by using a web access control list (ACL) to protect your AWS resources.
+- **AWS Key Management Service (AWS KMS):** Enables you to perform encryption operations through the use of cryptographic keys. You can use AWS KMS to create, manage, and use cryptographic keys. You can also control the use of keys across a wide range of services and in your applications.
+- **Amazon Inspector:** Amazon Inspector helps to improve the security and compliance of applications by running automated security assessments.
+- **Amazon GuardDuty:** Is a service that provides intelligent threat detection for your AWS infrastructure and resources. It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.
 
 ## Module 7: Monitoring and Analytics
 
 ### [Video: Monitoring and Analytics](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/Fn2nN/introduction-to-module-7)
 
-- Amazon CloudWatch
-  - Amazon CloudWatch Alarm
-  - MTTR & TCO
-- AWS CloudTrail
-- CloudTrail Insights
-- AWS Trusted Advisor
+- **Amazon CloudWatch:** Is a web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.
+  - **Amazon CloudWatch Alarm:** With CloudWatch, you can create alarms that automatically perform actions if the value of your metric has gone above or below a predefined threshold.
+- **AWS CloudTrail:** AWS CloudTrail records API calls for your account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, and more.
+- **CloudTrail Insights:** This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account.
+- **AWS Trusted Advisor:** Is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. Trusted Advisor compares its findings to AWS best practices in five categories: cost optimization, performance, security, fault tolerance, and service limits.
 
 ## Module 8: Pricing and Support
 
 ### [Video: Pricing and Support](https://www.coursera.org/learn/aws-cloud-practitioner-essentials/lecture/DdiEO/introduction-to-module-8)
 
-- AWS Free Tier
-- AWS Pricing
-- Billing Dashboard
-- Consolidated Billing
-- AWS Budgets
-- AWS Cost Explorer
-- AWS Console Billing
-- AWS Support Plans
-  - Basic
-  - Developer
-  - Business
-  - Enterprise
-- AWS Personal Health Dashboard
-- Technical Account Manager (TAM)
-- AWS Marketplace
+- **AWS Free Tier:** The AWS Free Tier enables you to begin using certain services without having to worry about incurring costs for the specified period.
+  - **Always Free:** These offers do not expire and are available to all AWS customers.
+  - **12 months Free:** These offers are free for 12 months following your initial sign-up date to AWS.
+  - **Trials:** Short-term free trial offers start from the date you activate a particular service. The length of each trial might vary by number of days or the amount of usage in the service.
+  - **Free Services:** SageMaker, Comprehend Medical, DynamoDB, SNS, Cognito
+- **AWS Pricing:**
+  - Pay for what you use.
+  - Pay less when you reserve.
+  - Pay less with volume-based discounts when you use more.
+- **AWS Pricing Calculator:** The AWS Pricing Calculator lets you explore AWS services and create an estimate for the cost of your use cases on AWS. You can organize your AWS estimates by groups that you define.
+- **Billing Dashboard:** Use the AWS Billing & Cost Management dashboard to pay your AWS bill, monitor your usage, and analyze and control your costs.
+  - Publish AWS Cost and Usage Reports.
+- **Consolidated Billing:** The consolidated billing feature of AWS Organizations enables you to receive a single bill for all AWS accounts in your organization. By consolidating, you can easily track the combined costs of all the linked accounts in your organization. The default maximum number of accounts allowed for an organization is 4, but you can contact AWS Support to increase your quota, if needed.
+- **AWS Budgets:** In AWS Budgets, you can create budgets to plan your service usage, service costs, and instance reservations. In AWS Budgets, you can also set custom alerts when your usage exceeds (or is forecasted to exceed) the budgeted amount.
+- **AWS Cost Explorer:** AWS Cost Explorer is a tool that enables you to visualize, understand, and manage your AWS costs and usage over time.
+- **AWS Console Billing:**
+- **AWS Support Plans:**
+  - **Basic:** Basic Support is free for all AWS customers. It includes access to whitepapers, documentation, and support communities. With Basic Support, you can also contact AWS for billing questions and service limit increases. With Basic Support, you have access to a limited selection of AWS Trusted Advisor checks. Additionally, you can use the **AWS Personal Health Dashboard**, a tool that provides alerts and remediation guidance when AWS is experiencing events that may affect you.
+  - **Developer:** Best practice guidance. Client-side diagnostic tools. Building-block architecture support, which consists of guidance for how to use AWS offerings, features, and services together.
+  - **Business:** Use-case guidance to identify AWS offerings, features, and services that can best support your specific needs. All AWS Trusted Advisor checks. Limited support for third-party software, such as common operating systems and application stack components.
+  - **Enterprise:** Application architecture guidance, which is a consultative relationship to support your company’s specific use cases and applications. Infrastructure event management: A short-term engagement with AWS Support that helps your company gain a better understanding of your use cases. This also provides your company with architectural and scaling guidance. A Technical Account Manager
+- **Technical Account Manager (TAM):** If your company has an Enterprise Support plan, the TAM is your primary point of contact at AWS. They provide guidance, architectural reviews, and ongoing communication with your company as you plan, deploy, and optimize your applications. Your TAM provides expertise across the full range of AWS services. They help you design solutions that efficiently use multiple services together through an integrated approach.
+- **AWS Marketplace:** AWS Marketplace is a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.
 
 ## Module 9: Migration and Innovation
 
