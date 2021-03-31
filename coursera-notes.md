@@ -143,7 +143,7 @@
 
 - **AWS Identity an Access Management (AWS IAM):** Enables you to manage access to AWS services and resources securely.
 - **Principle of least privilege:** A user is granted access only to what they need.
-- **IAM User**: An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials. By default, when you create a new IAM user in AWS, it has no permissions associated with it.
+- **IAM User** An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials. By default, when you create a new IAM user in AWS, it has no permissions associated with it.
 - **IAM Policy:** An IAM policy is a document that allows or denies permissions to AWS services and resources.
 - **IAM Groups:** An IAM group is a collection of IAM users. When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
 - **IAM Role:** An IAM role is an identity that you can assume to gain temporary access to permissions.
